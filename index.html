@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase — Home</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@200;300;400&family=Cinzel:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ─── LOADER ─────────────────────────────────────────── -->
+    <div id="loader">
+        <div class="loader-count" id="loader-count">0</div>
+        <div class="loader-logo">ShopEase</div>
+        <div class="loader-progress">
+            <div class="loader-fill" id="loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- Cursor visuals removed for performance -->
+
+    <!-- ─── TOAST ──────────────────────────────────────────── -->
+    <div class="toast" id="toast">
+        <div class="toast-line1">✦ Collection</div>
+        <div class="toast-line2" id="toast-msg">Item added successfully</div>
+    </div>
+
+    <!-- ─── HEADER ─────────────────────────────────────────── -->
+    <header>
+        <nav id="nav">
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html" class="logo-link">ShopEase</a></h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count" class="cart-dot">0</span>)</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════
+     VIDEO HERO
+════════════════════════════════════════════════════════ -->
+    <section class="hero">
+
+        <!-- SVG Liquid Filter -->
+        <svg style="position:absolute;width:0;height:0">
+            <defs>
+                <filter id="liquidFilter">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.01" numOctaves="3" seed="2" result="noise">
+                        <animate attributeName="baseFrequency" values="0.015 0.01;0.02 0.015;0.015 0.01" dur="12s"
+                            repeatCount="indefinite" />
+                    </feTurbulence>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" xChannelSelector="R"
+                        yChannelSelector="G" />
+                </filter>
+            </defs>
+        </svg>
+
+        <!-- Blob arena for hero -->
+        <div class="blob-arena">
+            <div class="morph-blob"
+                style="width:900px;height:900px;background:radial-gradient(circle,#c8a96d,transparent);top:-200px;left:-200px;animation-duration:22s;">
+            </div>
+            <div class="morph-blob"
+                style="width:600px;height:600px;background:radial-gradient(circle,#e84830,transparent);bottom:-100px;right:-100px;animation-duration:18s;animation-delay:-9s;">
+            </div>
+            <div class="morph-blob"
+                style="width:500px;height:500px;background:radial-gradient(circle,#4430cc,transparent);top:50%;left:50%;animation-duration:25s;animation-delay:-5s;opacity:0.08;">
+            </div>
+        </div>
+
+        <!-- Background video removed for speed; fallback placeholder retained -->
+        <div class="hero-video-fallback"></div>
+
+        <!-- Dark overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Content -->
+        <div class="hero-content">
+            <div class="hero-eyebrow">New Arrivals — Autumn Winter 2025</div>
+            <h1 class="hero-title">
+                Beauty<br>
+                <span class="hero-title-line2">Reimagined</span>
+            </h1>
+            <p class="hero-sub">Twelve exclusive pieces. One definitive collection.</p>
+            <div class="hero-ctas">
+                <button class="btn-cta-primary" onclick="fire('Entering the collection…')">Discover Collection</button>
+                <button class="btn-film" onclick="fire('Playing campaign film…')">
+                    <span class="play-circle"><span>▶</span></span>
+                    Campaign Film
+                </button>
+            </div>
+        </div>
+
+        <div class="scroll-cue">
+            <div class="scroll-cue-line"></div>
+            <div class="scroll-cue-text">Scroll</div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <div class="marquee-item">Handcrafted in Paris <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Sustainable Luxury <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Free Worldwide Delivery <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Artisan Workshop Since 1978 <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Certified Carbon Neutral <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Members 20% Off <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Handcrafted in Paris <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Sustainable Luxury <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Free Worldwide Delivery <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Artisan Workshop Since 1978 <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Certified Carbon Neutral <span class="marquee-dot"></span></div>
+            <div class="marquee-item">Members 20% Off <span class="marquee-dot"></span></div>
+        </div>
+    </div>
+
+    <!-- ═══ COLLECTIONS ══════════════════════════════════════ -->
+    <section class="collections-section">
+        <div class="blob-arena" style="position:absolute;overflow:hidden;">
+            <div class="morph-blob"
+                style="width:700px;height:700px;background:radial-gradient(circle,#c8a96d,transparent);top:10%;right:-200px;animation-duration:20s;animation-delay:-3s;">
+            </div>
+        </div>
+        <div class="section-header reveal">
+            <div>
+                <p class="section-kicker">AW 2025</p>
+                <h2 class="section-title">The <em>Collections</em><br><span class="ghost">Unveiled</span></h2>
+            </div>
+            <a href="#" class="see-all">View All</a>
+        </div>
+        <div class="h-scroll-wrap" id="hscroll">
+            <div class="col-card">
+                <div class="col-card-bg">
+                    <img class="col-card-img"
+                        src="https://img.drz.lazcdn.com/static/pk/p/eea72037136c90ff9a79129204b9e03a.jpg_720x720q80.jpg"
+                        alt="5-in-1 Hair Dryer Brush" loading="lazy">
+                </div>
+                <div class="col-card-overlay"></div>
+                <div class="col-card-content">
+                    <p class="col-number">01</p>
+                    <h3 class="col-title">5-in-1 Hair Dryer Brush</h3>
+                    <p class="col-sub">Styling Tool · Beauty</p>
+                    <button class="col-cta" onclick="window.location.href='product.html?id=1'">Explore →</button>
+                </div>
+            </div>
+
+            <div class="col-card">
+                <div class="col-card-bg">
+                    <img class="col-card-img"
+                        src="https://www.ardropshipping.com/storage/products/NiveBottle_1776717582_69e68f0e66c7e.jpg"
+                        alt="Crystal Luxe Glass Bottle" loading="lazy">
+                </div>
+                <div class="col-card-overlay"></div>
+                <div class="col-card-content">
+                    <p class="col-number">02</p>
+                    <h3 class="col-title">Crystal Luxe Glass Bottle</h3>
+                    <p class="col-sub">Home · Bottle</p>
+                    <button class="col-cta" onclick="window.location.href='product.html?id=2'">Explore →</button>
+                </div>
+            </div>
+
+            <div class="col-card">
+                <div class="col-card-bg">
+                    <img class="col-card-img"
+                        src="https://www.ardropshipping.com/storage/products/yellow--black-women-printed-night-suit-fabric-jersey-28028-510.jpg"
+                        alt="Women Printed Night Suit Set" loading="lazy">
+                </div>
+                <div class="col-card-overlay"></div>
+                <div class="col-card-content">
+                    <p class="col-number">03</p>
+                    <h3 class="col-title">Women Printed Night Suit Set</h3>
+                    <p class="col-sub">Clothing · Nightwear</p>
+                    <button class="col-cta" onclick="window.location.href='product.html?id=3'">Explore →</button>
+                </div>
+            </div>
+
+            <div class="col-card">
+                <div class="col-card-bg">
+                    <img class="col-card-img"
+                        src="https://i.pinimg.com/736x/2d/cf/59/2dcf592452b5e3e995a0cdc44d35d1ca.jpg"
+                        alt="Brown leather Tote Bag" loading="lazy">
+                </div>
+                <div class="col-card-overlay"></div>
+                <div class="col-card-content">
+                    <p class="col-number">04</p>
+                    <h3 class="col-title">Brown leather Tote Bag</h3>
+                    <p class="col-sub">Bags · Tote</p>
+                    <button class="col-cta" onclick="window.location.href='product.html?id=4'">Explore →</button>
+                </div>
+            </div>
+
+            <div class="col-card">
+                <div class="col-card-bg">
+                    <img class="col-card-img"
+                        src="https://content.public.markaz.app/markazimagevideo/public/products/1598-39-706932-product-1.webp"
+                        alt="Mustard Leather Handbag Set" loading="lazy">
+                </div>
+                <div class="col-card-overlay"></div>
+                <div class="col-card-content">
+                    <p class="col-number">05</p>
+                    <h3 class="col-title">Mustard Leather Handbag Set</h3>
+                    <p class="col-sub">Bags · Handbag Set</p>
+                    <button class="col-cta" onclick="window.location.href='product.html?id=5'">Explore →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIQUID SEPARATOR -->
+    <div class="liquid-sep">
+        <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 C1680,160 1920,0 2160,80 C2400,160 2640,0 2880,80 L2880,160 L0,160 Z"
+                fill="rgba(200,169,109,0.04)" />
+        </svg>
+        <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0,100 C360,20 720,160 1080,80 C1440,0 1800,140 2160,60 C2520,0 2760,100 2880,80 L2880,160 L0,160 Z"
+                fill="rgba(200,169,109,0.025)" />
+        </svg>
+    </div>
+
+    <!-- ═══ FEATURED PRODUCT ══════════════════════════════════ -->
+    <section class="featured">
+        <div class="feat-media">
+            <div class="feat-media-inner">
+                <img id="featured-image" src="" alt="Featured product" style="width:100%;height:100%;object-fit:cover;"
+                    loading="lazy">
+                <div class="feat-placeholder">
+                    <div class="feat-placeholder-inner">Featured Product</div>
+                </div>
+            </div>
+            <div class="feat-overlay-gradient"></div>
+            <!-- Floating material card -->
+            <div class="feat-float reveal">
+                <p class="feat-float-label">✦ Material Details</p>
+                <div class="material-row"><span>Fabric</span><span>100% Raw Silk</span></div>
+                <div class="material-row"><span>Origin</span><span>Sourced from heritage mills</span></div>
+                <div class="material-row"><span>Care</span><span>Dry Clean Only</span></div>
+                <div class="material-row" style="border:none"><span>Edition</span><span>Limited — 40 pcs</span></div>
+            </div>
+        </div>
+        <div class="feat-content">
+            <div class="blob-arena" style="position:absolute;overflow:hidden;">
+                <div class="morph-blob"
+                    style="width:600px;height:600px;background:radial-gradient(circle,#c8a96d,transparent);top:50%;left:-100px;transform:translateY(-50%);animation-duration:16s;">
+                </div>
+            </div>
+            <p class="feat-tag reveal">Featured Piece</p>
+            <h2 id="featured-title" class="feat-title reveal d1">The <em>Obsidian</em><br>Evening Gown</h2>
+            <p id="featured-desc" class="feat-desc reveal d2">
+                Sculpted from premium materials, this piece redefines evening elegance.
+                Hand-stitched by our studio with meticulous craftsmanship.
+            </p>
+            <div class="feat-price-row reveal d3">
+                <div id="featured-price" class="feat-price">$4,800</div>
+                <div id="featured-price-old" class="feat-price-old">$6,200</div>
+                <div id="featured-badge" class="feat-badge">Last 4</div>
+            </div>
+            <div class="feat-btn-row reveal d4">
+                <button class="btn-gold" onclick="addToCart(1)">Add to Bag</button>
+                <button class="btn-outline" onclick="window.location.href='product.html?id=1'">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FEATURED PRODUCTS ═══════════════════════════════════ -->
+    <section class="products-section reveal" style="padding:4rem 5rem 2rem;">
+        <div class="section-header"
+            style="padding:0;margin-bottom:2rem;display:flex;justify-content:space-between;align-items:flex-end;">
+            <div>
+                <p class="section-kicker">Featured Collection</p>
+                <h2 class="section-title">Most Loved <em>ShopEase</em> Picks</h2>
+            </div>
+        </div>
+        <div class="product-grid" id="featured-grid"></div>
+    </section>
+
+    <!-- ═══ BRAND STATS ════════════════════════════════════════ -->
+    <div class="brand-strip">
+        <div class="brand-stat reveal">
+            <div class="stat-number" data-target="47">0</div>
+            <div class="stat-text">Years of Craft</div>
+        </div>
+        <div class="brand-stat reveal d1">
+            <div class="stat-number" data-target="120">0</div>
+            <div class="stat-text">Studio Partners</div>
+        </div>
+        <div class="brand-stat reveal d2">
+            <div class="stat-number" data-target="98">0</div>
+            <div class="stat-text">% Satisfaction</div>
+        </div>
+        <div class="brand-stat reveal d3">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-text">Annual Collections</div>
+        </div>
+    </div>
+
+    <!-- LIQUID SEPARATOR 2 -->
+    <div class="liquid-sep" style="transform:scaleY(-1);">
+        <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,60 C480,140 960,0 1440,80 C1920,160 2400,20 2880,80 L2880,160 L0,160 Z"
+                fill="rgba(200,169,109,0.03)" />
+        </svg>
+    </div>
+
+    <!-- ═══ MORPH VIDEO SECTION ════════════════════════════════ -->
+    <section class="morph-section">
+        <div class="blob-arena">
+            <div class="morph-blob"
+                style="width:800px;height:800px;background:radial-gradient(circle,#4430cc,transparent);bottom:-200px;left:-200px;animation-duration:24s;animation-delay:-7s;opacity:0.08;">
+            </div>
+        </div>
+
+        <div class="morph-visual reveal">
+            <div class="morph-video-main">
+                <div class="mv-placeholder">Studio at Work</div>
+            </div>
+            <div class="morph-video-float">
+                <div class="mvf-placeholder">Detail Shot</div>
+            </div>
+            <div class="liquid-drip"></div>
+        </div>
+
+        <div class="morph-text">
+            <p class="feat-tag reveal">Our Philosophy</p>
+            <h2 class="morph-title reveal d1">Where <em>time</em><br>becomes craft</h2>
+            <p class="morph-body reveal d2">
+                Each ShopEase product passes through seventeen pairs of hands before it reaches yours.
+                We refuse to rush quality. Our process is measured in seasons, not deadlines.
+            </p>
+            <ul class="process-list reveal d3">
+                <li><span class="process-num">01</span> Hand-sketched by our creative director in Paris</li>
+                <li><span class="process-num">02</span> Sourced from heritage mills</li>
+                <li><span class="process-num">03</span> Pattern-cut by master tailors with 20+ years of craft</li>
+                <li><span class="process-num">04</span> Hand-finished with 140–300 hours of studio work</li>
+                <li><span class="process-num">05</span> Quality-inspected across 44 individual checkpoints</li>
+            </ul>
+            <button class="btn-gold reveal d4" onclick="fire('Exploring our studio…')">Enter the Studio</button>
+        </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ══════════════════════════════════════ -->
+    <section class="testi-section">
+        <div class="section-header reveal" style="padding:0;">
+            <div>
+                <p class="section-kicker">Client Stories</p>
+                <h2 class="section-title">Worn with <em>love</em></h2>
+            </div>
+        </div>
+        <div class="testi-grid">
+            <div class="testi-card reveal">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">I wore the Obsidian gown to the Met Gala and it stopped every single person in
+                    the room. The craftsmanship is beyond anything in the market today.</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">EC</div>
+                    <div>
+                        <div class="testi-name">Elena Castellano</div>
+                        <div class="testi-handle">@elenacastellano · Milan</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card reveal d1">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">In 30 years of wearing couture, nothing has moved me like ShopEase. The
+                    attention to the interior finishing is as exquisite as the exterior.</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">MV</div>
+                    <div>
+                        <div class="testi-name">Margaux Voss</div>
+                        <div class="testi-handle">@margaux.voss · Paris</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card reveal d2">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">The silk they use drapes like liquid light. I ordered the ivory coat and it
+                    arrived in the most beautiful packaging I've ever received. A true luxury experience.</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">JA</div>
+                    <div>
+                        <div class="testi-name">Jade Ashford</div>
+                        <div class="testi-handle">@jadeashford · London</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ NEWSLETTER ════════════════════════════════════════ -->
+    <section class="newsletter">
+        <div class="blob-arena">
+            <div class="morph-blob"
+                style="width:1000px;height:1000px;background:radial-gradient(circle,#c8a96d,transparent);top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:28s;opacity:0.07;">
+            </div>
+        </div>
+        <p class="section-kicker reveal" style="justify-content:center;">Inner Circle</p>
+        <h2 class="nl-title reveal d1">
+            Become<br>
+            <em>part of</em><br>
+            <span class="ghost">the story</span>
+        </h2>
+        <p class="nl-sub reveal d2">First access to new collections, private sales, and studio events.</p>
+        <div class="nl-form reveal d3">
+            <input class="nl-input" type="email" placeholder="Your email address">
+            <button class="nl-btn" onclick="fire('Welcome to the Inner Circle ✦')">Join</button>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <span class="f-brand-name">ShopEase</span>
+                <p class="f-brand-text">Premium fashion for those who believe that luxury and conscience are not
+                    mutually exclusive. Crafted with care for every customer.</p>
+            </div>
+            <div>
+                <p class="f-col-head">Shop</p>
+                <ul class="f-links">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Archive Sale</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="f-col-head">ShopEase</p>
+                <ul class="f-links">
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">The Studio</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press Room</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="f-col-head">Service</p>
+                <ul class="f-links">
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size & Fit Guide</a></li>
+                    <li><a href="#">Care Instructions</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="f-copy">© 2026 ShopEase. All rights reserved.</p>
+            <div class="f-socials">
+                <a href="#" class="f-social">IG</a>
+                <a href="#" class="f-social">TW</a>
+                <a href="#" class="f-social">IN</a>
+                <a href="#" class="f-social">YT</a>
+            </div>
+            <p class="f-copy">Privacy · Terms · Cookies</p>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════════════ -->
+    <script>
+        /* ── LOADER ─────────────────────────────────────────── */
+        let count = 0;
+        const countEl = document.getElementById('loader-count');
+        const fillEl = document.getElementById('loader-fill');
+        const loaderEl = document.getElementById('loader');
+
+        const tick = setInterval(() => {
+            count += Math.floor(Math.random() * 12) + 4;
+            if (count >= 100) {
+                count = 100;
+                clearInterval(tick);
+                setTimeout(() => loaderEl.classList.add('out'), 300);
+            }
+            countEl.textContent = count;
+            fillEl.style.width = count + '%';
+        }, 60);
+
+        /* ── LIQUID CANVAS CURSOR TRAIL ─────────────────────── */
+        const canvas = document.getElementById('cursor-canvas');
+        let ctx = null;
+        if (canvas && canvas.getContext) {
+            ctx = canvas.getContext('2d');
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            const particles = [];
+            let mx = -200, my = -200;
+
+            document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+            class Particle {
+                constructor(x, y) {
+                    this.x = x; this.y = y;
+                    this.size = Math.random() * 8 + 3;
+                    this.speedX = (Math.random() - 0.5) * 2;
+                    this.speedY = (Math.random() - 0.5) * 2 - 1;
+                    this.life = 1;
+                    this.decay = Math.random() * 0.03 + 0.02;
+                    this.hue = Math.random() * 20 + 35; // gold range
+                }
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    this.size *= 0.97;
+                    this.life -= this.decay;
+                }
+                draw() {
+                    if (!ctx) return;
+                    ctx.save();
+                    ctx.globalAlpha = this.life * 0.6;
+                    const g = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+                    g.addColorStop(0, `hsla(${this.hue}, 65%, 65%, 1)`);
+                    g.addColorStop(1, `hsla(${this.hue}, 65%, 65%, 0)`);
+                    ctx.fillStyle = g;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            let frameCount = 0;
+            function animCanvas() {
+                if (!ctx) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                frameCount++;
+                if (frameCount % 2 === 0) {
+                    for (let i = 0; i < 3; i++) particles.push(new Particle(mx, my));
+                }
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    particles[i].update();
+                    particles[i].draw();
+                    if (particles[i].life <= 0 || particles[i].size < 0.5) particles.splice(i, 1);
+                }
+                requestAnimationFrame(animCanvas);
+            }
+            animCanvas();
+        }
+
+        /* ── DIAMOND CURSOR MOVEMENT ────────────────────────── */
+        const core = document.getElementById('cursor-core');
+        const label = document.getElementById('cursor-label');
+        let coreX = -200, coreY = -200;
+        let targetX = -200, targetY = -200;
+
+        if (core) {
+            document.addEventListener('mousemove', e => {
+                targetX = e.clientX; targetY = e.clientY;
+            });
+
+            function animCursor() {
+                coreX += (targetX - coreX) * 0.14;
+                coreY += (targetY - coreY) * 0.14;
+                core.style.left = coreX + 'px';
+                core.style.top = coreY + 'px';
+                requestAnimationFrame(animCursor);
+            }
+            animCursor();
+        }
+
+        // Hover effect — attach only if cursor core exists
+        if (core) {
+            document.querySelectorAll('a,button,.col-card,.testi-card,.brand-stat').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    core.classList.add('hover');
+                    if (label) label.textContent = el.dataset.label || 'View';
+                });
+                el.addEventListener('mouseleave', () => core.classList.remove('hover'));
+            });
+        }
+
+        /* ── NAV SCROLL ──────────────────────────────────────── */
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 80);
+        });
+
+        /* ── SCROLL REVEAL ───────────────────────────────────── */
+        const reveals = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => io.observe(r));
+
+        /* ── STAT COUNTERS ───────────────────────────────────── */
+        const statEls = document.querySelectorAll('.stat-number[data-target]');
+        const statIO = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                const el = e.target;
+                const target = parseInt(el.dataset.target);
+                const suffix = el.dataset.suffix || '';
+                let start = 0;
+                const dur = 1800;
+                const begin = Date.now();
+                const step = () => {
+                    const progress = Math.min((Date.now() - begin) / dur, 1);
+                    const ease = 1 - Math.pow(1 - progress, 4);
+                    el.textContent = Math.round(ease * target) + suffix;
+                    if (progress < 1) requestAnimationFrame(step);
+                };
+                step();
+                statIO.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        statEls.forEach(el => statIO.observe(el));
+
+        /* ── TOAST ───────────────────────────────────────────── */
+        let toastTimer;
+        function fire(msg) {
+            const t = document.getElementById('toast');
+            const m = document.getElementById('toast-msg');
+            m.textContent = msg;
+            t.classList.add('on');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => t.classList.remove('on'), 3000);
+        }
+
+        /* ── MAGNETIC BUTTONS ────────────────────────────────── */
+        document.querySelectorAll('.btn-gold,.btn-cta-primary,.btn-outline').forEach(btn => {
+            btn.addEventListener('mousemove', e => {
+                const r = btn.getBoundingClientRect();
+                const x = e.clientX - r.left - r.width / 2;
+                const y = e.clientY - r.top - r.height / 2;
+                btn.style.transform = `translate(${x * 0.18}px, ${y * 0.25}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = '';
+            });
+        });
+
+        /* ── PARALLAX BLOBS ON SCROLL ────────────────────────── */
+        window.addEventListener('scroll', () => {
+            const sy = window.scrollY;
+            document.querySelectorAll('.morph-blob').forEach((b, i) => {
+                const speed = (i % 2 === 0 ? 0.15 : -0.1);
+                b.style.transform = `translateY(${sy * speed}px)`;
+            });
+        });
+
+        /* ── TEXT CHAR SCRAMBLE on hero ──────────────────────── */
+        function scramble(el, final, duration = 900) {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            const start = Date.now();
+            const timer = setInterval(() => {
+                const progress = (Date.now() - start) / duration;
+                if (progress >= 1) { el.textContent = final; clearInterval(timer); return; }
+                el.textContent = final.split('').map((c, i) => {
+                    if (c === ' ' || c === '\n') return c;
+                    if (i / final.length < progress) return c;
+                    return chars[Math.floor(Math.random() * chars.length)];
+                }).join('');
+            }, 30);
+        }
+
+        setTimeout(() => {
+            const subEl = document.querySelector('.hero-sub');
+            if (subEl) scramble(subEl, subEl.textContent, 1200);
+        }, 2400);
+    </script>
+    <script src="script.js"></script>
+    <script src="variants-feature-fixed.js"></script>
+</body>
+
+</html>

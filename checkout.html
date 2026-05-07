@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ShopEase checkout page lets you complete your PKR-based order with fast payment and shipping details.">
+    <meta name="keywords" content="ShopEase checkout, Pakistani checkout, PKR online order, secure checkout">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="ShopEase Checkout - Pakistani Online Store">
+    <meta property="og:description"
+        content="Complete your PKR order securely with ShopEase checkout, delivery, and contact details.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/checkout.html">
+    <meta property="og:image" content="https://www.yourdomain.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>ShopEase — Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html" class="logo-link">ShopEase</a></h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout-section">
+            <h2>Checkout</h2>
+            <div class="checkout-container">
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="order-items">
+                        <!-- Order items will be loaded here -->
+                    </div>
+                    <div id="order-total">
+                        <!-- Total will be shown here -->
+                    </div>
+                </div>
+                <form id="checkout-form" class="checkout-form">
+                    <h3>Shipping Information</h3>
+
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="field-error" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" required></textarea>
+                        <span class="field-error" id="address-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="e.g. 03001234567">
+                        <span class="field-error" id="phone-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn">Place Order</button>
+                </form>
+
+                <!-- Success Modal -->
+                <div id="order-success-modal" class="modal-overlay" style="display:none;">
+                    <div class="modal-card">
+                        <div class="modal-icon">✓</div>
+                        <h2>Thank You!</h2>
+                        <p>Your order has been placed successfully.</p>
+                        <p class="modal-sub">We'll deliver your items soon. Payment will be collected on delivery (COD).
+                        </p>
+                        <a href="index.html" class="btn modal-btn">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShopEase</h3>
+                <p>Your one-stop shop for amazing products</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@shopease.pk</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="variants-feature-fixed.js"></script>
+</body>
+
+</html>
