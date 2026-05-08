@@ -598,67 +598,7 @@ nav.scrolled {
     box-shadow: 0 16px 50px rgba(200, 169, 109, 0.4);
 }
 
-/* Hero scroll cue */
-.scroll-cue {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    opacity: 0;
-    animation: fadeUp 1s 2.8s ease both;
-}
-
-.scroll-cue-line {
-    width: 1px;
-    height: 50px;
-    background: linear-gradient(to bottom, var(--gold), transparent);
-    animation: scrollLine 2s ease-in-out infinite;
-}
-
-.scroll-cue-text {
-    font-family: 'Cinzel', serif;
-    font-size: 0.55rem;
-    letter-spacing: 0.4em;
-    color: var(--gold);
-    text-transform: uppercase;
-    opacity: 0.6;
-}
-
-@keyframes scrollLine {
-    0% {
-        transform: scaleY(0);
-        transform-origin: top;
-    }
-
-    50% {
-        transform: scaleY(1);
-        transform-origin: top;
-    }
-
-    51% {
-        transform: scaleY(1);
-        transform-origin: bottom;
-    }
-
-    100% {
-        transform: scaleY(0);
-        transform-origin: bottom;
-    }
-}
-
-/* ══ LIQUID MORPHING BLOBS ═══════════════════════ */
-.blob-arena {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
-}
+/* Mobile nav adjustments removed — navigation is always visible */
 
 .morph-blob {
     position: absolute;
@@ -1920,8 +1860,10 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 0.5rem;
     padding: 1rem;
 }
 
@@ -1932,25 +1874,31 @@ footer {
 }
 
 .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
     list-style: none;
-    display: flex;
-}
-
-.nav-links.active {
-    display: flex;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    background: #0d0d1a;
+    border-radius: 8px;
 }
 
 .nav-links li {
-    margin-left: 2rem;
+    margin: 0;
 }
 
 .nav-links a,
 .logo-link {
-    color: #ffffff;
-    transition: all 0.3s ease;
+    color: var(--ink);
+    transition: color 0.3s ease;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    font-weight: 600;
 }
 
 .nav-links a::after {
@@ -2029,33 +1977,6 @@ footer {
 
     .hamburger span {
         background-color: var(--ink);
-    }
-
-    /* Hide nav links by default on mobile; show when `active` */
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: calc(100% + 8px);
-        left: 1rem;
-        right: 1rem;
-        background: var(--panel);
-        border-radius: 10px;
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.75rem;
-        align-items: center;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-        z-index: 1050;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
     }
 
     .nav-links a {
@@ -3064,23 +2985,7 @@ main {
         flex-direction: column;
     }
 
-    .nav-links {
-        flex-direction: column;
-        margin-top: 1rem;
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
+    /* Navigation remains horizontal and visible on all sizes; no hide/collapse */
 
     .product-grid {
         grid-template-columns: 1fr;
@@ -3274,33 +3179,7 @@ header.scrolled {
     transition: background .18s;
 }
 
-@media (max-width: 880px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        right: 1.25rem;
-        top: 64px;
-        background: linear-gradient(180deg, rgba(22, 21, 38, 0.92), rgba(12, 11, 18, 0.94));
-        padding: 12px;
-        border-radius: 12px;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
-    }
-
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        min-width: 160px;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin-left: 0;
-        margin-bottom: 0.5rem;
-    }
-}
+/* Removed mobile hide rules — navigation remains visible at all sizes */
 
 /* ---------- SECTIONS + CONTAINERS ---------- */
 section,
@@ -3377,7 +3256,51 @@ section,
 .product-card:hover {
     transform: translateY(-6px) scale(1.02);
     border-color: rgba(200, 169, 109, 0.35);
-    box-shadow: 0 18px 45px rgba(2, 2, 10, 0.65), 0 0 28px rgba(200, 169, 109, 0.04);
+
+    /* === Always-visible, centered navigation (override duplicates) === */
+    header nav .nav-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+    }
+
+    header nav .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 1.25rem !important;
+        align-items: center !important;
+        background: #0d0d1a !important;
+        padding: 0.45rem 0.75rem !important;
+        border-radius: 8px !important;
+        margin: 0 !important;
+    }
+
+    header nav .nav-links li {
+        margin: 0 !important;
+    }
+
+    header nav .nav-links a {
+        color: var(--ink) !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+    }
+
+    header nav .nav-links a:hover,
+    header nav .nav-links a.active {
+        color: #D4AF37 !important;
+    }
+
+    /* Ensure hamburger is hidden */
+    .hamburger {
+        display: none !important;
+    }
+
+    box-shadow: 0 18px 45px rgba(2, 2, 10, 0.65),
+    0 0 28px rgba(200, 169, 109, 0.04);
 }
 
 /* ---------- BUTTONS ---------- */

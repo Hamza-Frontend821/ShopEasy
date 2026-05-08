@@ -501,15 +501,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Hamburger menu functionality
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-links');
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    }
-
     // Scroll animations
     const observerOptions = {
         threshold: 0.1,
