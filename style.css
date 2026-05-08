@@ -1997,6 +1997,76 @@ footer {
     transition: 0.3s;
 }
 
+/* Mobile nav adjustments */
+@media (max-width: 900px) {
+    .nav-container {
+        justify-content: center;
+        position: relative;
+        padding: 0.6rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+    }
+
+    .logo-link {
+        white-space: nowrap;
+    }
+
+    /* Show hamburger and position it at left */
+    .hamburger {
+        display: flex;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1100;
+    }
+
+    .hamburger span {
+        background-color: var(--ink);
+    }
+
+    /* Hide nav links by default on mobile; show when `active` */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 1rem;
+        right: 1rem;
+        background: var(--panel);
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        align-items: center;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        z-index: 1050;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+}
+
 /* Main content */
 main {
     max-width: 1200px;
