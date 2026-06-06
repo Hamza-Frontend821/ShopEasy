@@ -688,6 +688,75 @@ nav.scrolled {
     }
 }
 
+/* ══ PARTNER LOGO SHOWCASE ════════════════════════ */
+.partner-showcase {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(30, 41, 59, 0.5));
+    border-top: 1px solid rgba(200, 169, 109, 0.08);
+    border-bottom: 1px solid rgba(200, 169, 109, 0.08);
+}
+
+.partner-showcase h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #D4AF37;
+    margin-bottom: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+.logo-marquee-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.logo-marquee {
+    display: flex;
+    gap: 2.5rem;
+    animation: scrollLogos 40s linear infinite;
+    padding: 0.5rem 0;
+}
+
+.logo-marquee:hover {
+    animation-play-state: paused;
+}
+
+.partner-logo {
+    flex: 0 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    color: #f1f5f9;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.partner-logo svg {
+    height: 100%;
+    width: auto;
+    max-width: 140px;
+    filter: brightness(0.9) saturate(0.8);
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover svg {
+    filter: brightness(1.2) saturate(1) drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
+    transform: scale(1.08);
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* ══ LIQUID SECTION TRANSITION ═══════════════════ */
 .liquid-sep {
     position: relative;
@@ -2402,12 +2471,12 @@ main {
     margin-top: 3rem;
     padding: 2rem;
     border-radius: 20px;
-    background: #ecfdf5;
-    border: 1px solid #bbf7d0;
+    background: #272b29;
+    border: 1px solid #1b201d;
 }
 
 .reviews-section h3 {
-    color: #166534;
+    color: #a09734;
     margin-bottom: 1.5rem;
 }
 
@@ -2417,7 +2486,7 @@ main {
 }
 
 .review-item {
-    background: #ffffff;
+    background: #2f2e598a;
     padding: 1.3rem;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
@@ -2434,7 +2503,7 @@ main {
 }
 
 .review-header strong {
-    color: #0f172a;
+    color: #000000;
 }
 
 .review-stars {
@@ -2443,8 +2512,63 @@ main {
 }
 
 .review-comment {
-    color: #334155;
+    color: #000000;
     line-height: 1.8;
+}
+
+.review-form {
+    margin-top: 1.75rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.review-form h4 {
+    margin: 0 0 0.85rem 0;
+    font-size: 1.1rem;
+    color: #a73535;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #a33535;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+    width: 100%;
+    border: 1px solid rgba(200, 169, 109, 0.16);
+    border-radius: 14px;
+    padding: 0.95rem 1rem;
+    background: #ffffff;
+    color: #000000;
+    box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.review-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.review-form .rating-group {
+    flex: 1 1 160px;
+}
+
+.review-form button#submit-review-btn {
+    max-width: 240px;
+}
+
+.review-form .field-error {
+    margin-top: 0.5rem;
 }
 
 .rating-text {
@@ -3499,4 +3623,302 @@ textarea,
 select,
 label {
     cursor: default !important;
+}
+
+/* Compact global spacing overrides */
+:root {
+    --header-height: 60px;
+    --section-spacing: clamp(1.5rem, 2.5vw, 2.5rem);
+    --section-spacing-large: clamp(3rem, 4vw, 4.5rem);
+}
+
+header,
+nav,
+#nav {
+    padding: 0.85rem 1.25rem !important;
+    min-height: auto !important;
+    margin: 0 !important;
+}
+
+header nav .nav-container,
+nav .nav-container {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    gap: 0.75rem !important;
+    align-items: center !important;
+}
+
+header nav .logo,
+nav .nav-logo,
+.logo,
+.logo-link {
+    margin: 0 !important;
+}
+
+header nav .nav-links,
+nav .nav-links {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 1rem !important;
+}
+
+header nav .nav-links a,
+nav .nav-links a {
+    padding: 0.15rem 0 !important;
+}
+
+nav.scrolled,
+#nav.scrolled,
+header.scrolled {
+    padding: 0.6rem 1.25rem !important;
+}
+
+body>main,
+main {
+    padding-top: calc(var(--header-height) + 20px) !important;
+}
+
+.hero {
+    min-height: min(88vh, calc(100vh - 4rem)) !important;
+    padding: 0 !important;
+}
+
+.hero-content {
+    padding: 1.5rem 1rem !important;
+}
+
+.hero-eyebrow {
+    margin-bottom: 1rem !important;
+}
+
+.hero-title {
+    margin-bottom: 1.4rem !important;
+}
+
+.hero-sub {
+    margin-bottom: 1.8rem !important;
+}
+
+.hero-ctas {
+    gap: 1rem !important;
+}
+
+.scroll-cue {
+    margin-top: 1rem !important;
+}
+
+.marquee-wrap {
+    padding: 1rem 0 !important;
+}
+
+.liquid-sep {
+    height: 120px !important;
+}
+
+.collections-section {
+    padding: 4.5rem 0 3rem !important;
+}
+
+.section-header {
+    padding: 0 2rem !important;
+    margin-bottom: 2.5rem !important;
+}
+
+.h-scroll-wrap {
+    padding: 0 2rem 2rem !important;
+}
+
+.col-card-content {
+    padding: 1.5rem !important;
+}
+
+.featured {
+    min-height: min(82vh, 84rem) !important;
+}
+
+.feat-content {
+    padding: 3rem 2rem !important;
+}
+
+.feat-desc {
+    margin-bottom: 2rem !important;
+}
+
+.feat-price-row {
+    margin-bottom: 1.5rem !important;
+    gap: 1rem !important;
+}
+
+.feat-btn-row {
+    gap: 1rem !important;
+}
+
+.testi-section,
+.newsletter,
+.morph-section,
+.products-section,
+.about-section,
+.terms-section {
+    padding-top: var(--section-spacing-large) !important;
+    padding-bottom: var(--section-spacing-large) !important;
+}
+
+.about-section,
+.terms-section {
+    padding: 2.2rem 1rem !important;
+}
+
+.about-content,
+.terms-content {
+    padding: 2rem !important;
+    gap: 1.5rem !important;
+}
+
+.footer-content {
+    gap: 1.5rem !important;
+    padding: 0 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+footer {
+    padding: 1.5rem 0 !important;
+}
+
+.footer-bottom {
+    padding-top: 0.75rem !important;
+}
+
+.products-section {
+    padding: 2.5rem 0 2rem !important;
+}
+
+.filters {
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 1rem !important;
+}
+
+.product-grid {
+    gap: clamp(1rem, 2vw, 1.5rem) !important;
+    margin-top: 1.25rem !important;
+    padding: 0 1rem !important;
+}
+
+.product-detail,
+.checkout-container {
+    gap: 1.5rem !important;
+    padding: 1.5rem !important;
+}
+
+.reviews-section {
+    margin-top: 2rem !important;
+    padding: 1.5rem !important;
+}
+
+.review-item {
+    padding: 1rem !important;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+input[type="text"],
+textarea,
+select {
+    padding: 0.75rem 0.9rem !important;
+}
+
+@media (max-width: 900px) {
+
+    header,
+    nav,
+    #nav {
+        padding: 0.7rem 1rem !important;
+    }
+
+    .partner-showcase {
+        padding: 2rem 1.5rem;
+    }
+
+    .partner-showcase h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .logo-marquee {
+        gap: 2rem;
+    }
+
+    .partner-logo {
+        padding: 0 1rem;
+    }
+
+    .partner-logo svg {
+        max-width: 110px;
+        height: 50px;
+    }
+
+    @keyframes scrollLogos {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-33.33%);
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    main {
+        padding-top: 78px !important;
+    }
+
+    .hero {
+        min-height: 72vh !important;
+    }
+
+    .collections-section,
+    .testi-section,
+    .newsletter,
+    .about-section,
+    .terms-section {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .h-scroll-wrap {
+        padding: 0 1rem 1.5rem !important;
+    }
+
+    .partner-showcase {
+        padding: 1.5rem 1rem;
+    }
+
+    .partner-showcase h3 {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .logo-marquee {
+        gap: 1.5rem;
+    }
+
+    .partner-logo {
+        padding: 0 0.75rem;
+    }
+
+    .partner-logo svg {
+        max-width: 90px;
+        height: 40px;
+    }
+
+    @keyframes scrollLogos {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
 }

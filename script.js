@@ -1,22 +1,22 @@
 // Product data - images are arrays to support multiple images
 const products = [
     { id: 1, name: "5-in-1 Hair Dryer Brush", category: "beauty", price: 2999, variants: ["Standard"], description: "All-in-one styling tool with dryer, curler, and straightener for salon-like results at home. This versatile hair dryer brush combines multiple functions including drying, volumizing, smoothing, and curling, allowing you to style your hair in a single step. It uses advanced ionic technology to reduce frizz, enhance shine, and improve overall hair texture. The ceramic coating ensures even heat distribution, minimizing damage while maintaining healthy hair. With multiple heat settings and an ergonomic lightweight design, it is suitable for all hair types and perfect for daily styling, saving time and effort while delivering professional-level results at home.", images: ["https://img.drz.lazcdn.com/static/pk/p/eea72037136c90ff9a79129204b9e03a.jpg_720x720q80.jpg"], badge: "Best Seller" },
-    { id: 2, name: "Crystal Luxe Glass Bottle", category: "home", price: 1299, variants: ["Multi Colors"], description: "Premium BPA-free stylish bottle with leak-proof lid for gym & travel. Crafted with high-quality durable glass, this bottle ensures safe and chemical-free hydration for daily use. Its sleek and modern design adds a premium look, making it perfect for office, gym, or outdoor activities. The secure leak-proof lid prevents spills, while the sturdy build enhances long-term usability. Easy to clean and reusable, it promotes an eco-friendly lifestyle by reducing plastic waste. Lightweight and convenient to carry, it is ideal for maintaining hydration throughout the day while combining functionality with elegance and style.", images: ["https://www.ardropshipping.com/storage/products/NiveBottle_1776717582_69e68f0e66c7e.jpg"] },
+    { id: 2, name: "Crystal Luxe Glass Bottle", category: "home", price: 1299, variants: ["Multi Colors"], description: "Premium BPA-free stylish bottle with leak-proof lid for gym & travel. Designed with high-quality durable glass, this bottle ensures safe and chemical-free hydration for daily use. Its sleek and modern design adds a premium look, making it perfect for office, gym, or outdoor activities. The secure leak-proof lid prevents spills, while the sturdy build enhances long-term usability. Easy to clean and reusable, it promotes an eco-friendly lifestyle by reducing plastic waste. Lightweight and convenient to carry, it is ideal for maintaining hydration throughout the day while combining functionality with elegance and style.", images: ["https://www.ardropshipping.com/storage/products/NiveBottle_1776717582_69e68f0e66c7e.jpg"] },
     { id: 3, name: "Women Printed Night Suit Set", category: "clothing", price: 1499, variants: ["Orange", "Pink", "Purple", "Black"], description: "Soft trouser comfortable nightwear for daily use & summer comfort. Made from breathable and lightweight fabric, this night suit ensures maximum comfort and relaxation during sleep. The soft texture feels gentle on the skin, making it suitable for long wear without irritation. Designed with attractive prints and a modern fit, it offers both style and comfort for home use. Ideal for warm weather, the fabric allows proper airflow, keeping you cool throughout the night. Perfect for lounging, sleeping, or casual indoor wear, this set combines comfort, durability, and trendy design for everyday use.", images: ["https://www.ardropshipping.com/storage/products/yellow--black-women-printed-night-suit-fabric-jersey-28028-510.jpg", "https://images.olx.com.pk/thumbnails/599655947-600x450.jpeg"] },
     { id: 4, name: "Brown leather Tote Bag", category: "bags", price: 3199, variants: ["Brown"], description: "Spacious premium tote bag for office, shopping & travel use. Made from high-quality rexine and Leather material, this bag offers durability along with a stylish appearance. It features a large interior compartment that can easily hold daily essentials such as books, gadgets, and personal items. The sturdy handles provide comfortable carrying, while the elegant  color adds a sophisticated touch to your look. Designed for versatility, it is suitable for work, shopping, and travel purposes. Its structured design ensures shape retention, making it both practical and fashionable for everyday use.", images: ["https://i.pinimg.com/736x/2d/cf/59/2dcf592452b5e3e995a0cdc44d35d1ca.jpg"] },
     { id: 5, name: "Mustard Leather Handbag Set", category: "bags", price: 2899, variants: ["Mustard"], description: "Stylish PU leather handbag set designed for students with trendy look. This elegant handbag set includes multiple pieces to suit different needs, offering both style and convenience. Made from high-quality PU leather, it provides a premium feel while remaining lightweight and durable. The mustard color gives a bold and fashionable appearance, perfect for modern outfits. With spacious compartments and organized storage, it allows you to carry essentials easily. Suitable for college, casual outings, and daily use, this set combines functionality, versatility, and a stylish design.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/1598-39-706932-product-1.webp"] },
-    { id: 6, name: "4-Piece PU Leather Handbag Set", category: "bags", price: 2999, variants: ["White", "Black", "Maroon", "Pink", "Blue", "Yellow", "Brown", "Grey"], description: "Premium multi-piece handbag set with elegant paisley design. This set includes multiple bags designed for different occasions, providing versatility and convenience in one package. Crafted from durable PU leather, it ensures long-lasting use while maintaining a stylish look. The elegant paisley pattern adds a unique and premium touch to the overall design. Each piece offers ample storage space for essentials, making it ideal for daily use, travel, or special occasions. Lightweight and easy to carry, this handbag set is perfect for those who value both fashion and practicality.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-1.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-2.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-3.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-4.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-5.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-7.jpg"], badge: "Most Selling" },
+    { id: 6, name: "4-Piece PU Leather Handbag Set", category: "bags", price: 2999, variants: ["White", "Black", "Maroon", "Pink", "Blue", "Yellow", "Brown", "Grey"], description: "Premium multi-piece handbag set with elegant paisley design. This set includes multiple bags designed for different occasions, providing versatility and convenience in one package. Made from durable PU leather, it ensures long-lasting use while maintaining a stylish look. The elegant paisley pattern adds a unique and premium touch to the overall design. Each piece offers ample storage space for essentials, making it ideal for daily use, travel, or special occasions. Lightweight and easy to carry, this handbag set is perfect for those who value both fashion and practicality.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-1.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-2.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-3.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-4.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-5.jpg", "https://content.public.markaz.app/markazimagevideo/public/products/977-37-333483-product-7.jpg"], badge: "Most Selling" },
     { id: 7, name: "24K Pure Black Perfume", category: "perfume", price: 2799, variants: ["Standard"], description: "Long-lasting luxury fragrance for premium feel. This perfume is designed with a rich and intense scent profile that leaves a lasting impression throughout the day. Its carefully blended notes create a bold and sophisticated aroma suitable for both formal and casual occasions. The fragrance is long-lasting, reducing the need for frequent reapplication. Ideal for individuals who prefer a strong and elegant scent, it enhances confidence and personal style. Packaged in a stylish bottle, it reflects luxury and quality, making it a perfect addition to your fragrance collection.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/860-281-590483-product-1.jpeg", "https://content.public.markaz.app/markazimagevideo/public/products/860-281-590483-product-2.jpeg"] },
     { id: 8, name: "9 PM Afnan Inspired Perfume", category: "perfume", price: 2699, variants: ["Standard"], description: "Bold and attractive scent perfect for evening wear. This fragrance features a strong and captivating aroma that is ideal for nighttime events and special occasions. Its unique blend of notes creates a warm and inviting scent that enhances your overall presence. Designed for long-lasting performance, it keeps you feeling fresh and confident for hours. The elegant bottle design adds a premium touch, making it suitable for gifting as well. Perfect for those who want to stand out, this perfume combines style, confidence, and sophistication in one fragrance.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/1183-206-710837-product-1.webp"] },
-    { id: 9, name: "Flora Floral Perfume", category: "perfume", price: 3299, variants: ["Standard"], description: "Fresh floral fragrance for daily elegance. This perfume is crafted with delicate floral notes that provide a soft and refreshing scent ideal for everyday use. Its light composition makes it suitable for both daytime and casual occasions, offering a pleasant and soothing experience. The fragrance is designed to last for several hours while maintaining a subtle yet noticeable presence. Packaged in a beautifully designed bottle, it adds a touch of sophistication to your collection. Perfect for individuals who prefer a gentle and elegant fragrance.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/1004-281-499135-product-1-withcode.jpeg"] },
+    { id: 9, name: "Flora Floral Perfume", category: "perfume", price: 3299, variants: ["Standard"], description: "Fresh floral fragrance for daily elegance. This perfume is composed with delicate floral notes that provide a soft and refreshing scent ideal for everyday use. Its light composition makes it suitable for both daytime and casual occasions, offering a pleasant and soothing experience. The fragrance is designed to last for several hours while maintaining a subtle yet noticeable presence. Packaged in a beautifully designed bottle, it adds a touch of sophistication to your collection. Perfect for individuals who prefer a gentle and elegant fragrance.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/1004-281-499135-product-1-withcode.jpeg"] },
     { id: 10, name: "Wasim Akram 502 Inspired", category: "perfume", price: 1999, variants: ["Standard"], description: "Classic refreshing fragrance with premium vibe. This perfume delivers a balanced blend of fresh and woody notes, creating a timeless scent suitable for all occasions. Its long-lasting formula ensures continuous freshness throughout the day. Designed for versatility, it can be worn both casually and formally, making it a reliable everyday fragrance. The elegant packaging enhances its premium appeal, while the scent reflects confidence and sophistication. Ideal for individuals seeking a classic yet modern fragrance experience.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/1183-281-718021-product-1.webp", "https://content.public.markaz.app/markazimagevideo/public/products/1183-281-718021-product-2.webp"] },
-    { id: 11, name: "Jasmine Unisex Perfume", category: "perfume", price: 2099, variants: ["Standard"], description: "Light and soft fragrance for both men & women. This perfume is carefully crafted with delicate jasmine floral notes blended with subtle fresh undertones to create a soothing and elegant scent. It is designed for everyday wear, making it suitable for office, casual outings, and social gatherings. The fragrance is gentle yet noticeable, providing a calm and refreshing experience throughout the day. Its balanced composition ensures it is not overpowering, making it perfect for unisex use. The long-lasting formula keeps you fresh for hours while maintaining a soft, classy impression that suits all personalities.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/691-281-412949-product-1.jpg"] },
-    { id: 12, name: "Morena Noir Perfume", category: "perfume", price: 2199, variants: ["Standard"], description: "Deep bold fragrance for confident personality. Morena Noir is designed for individuals who prefer strong, intense, and long-lasting scents that leave a powerful impression. It combines woody, musky, and slightly spicy notes to create a rich aroma suitable for evening wear and special occasions. The fragrance is crafted to enhance confidence and elegance, making it ideal for formal events and night outings. Its premium formulation ensures durability on skin for extended hours without fading quickly. Packaged in a stylish bottle, it reflects luxury, strength, and sophistication in every spray.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/512-281-456597-product-2.jpeg", "https://content.public.markaz.app/markazimagevideo/public/products/512-281-456597-product-1.jpg"] },
+    { id: 11, name: "Jasmine Unisex Perfume", category: "perfume", price: 2099, variants: ["Standard"], description: "Light and soft fragrance for both men & women. This perfume is carefully composed with delicate jasmine floral notes blended with subtle fresh undertones to create a soothing and elegant scent. It is designed for everyday wear, making it suitable for office, casual outings, and social gatherings. The fragrance is gentle yet noticeable, providing a calm and refreshing experience throughout the day. Its balanced composition ensures it is not overpowering, making it perfect for unisex use. The long-lasting formula keeps you fresh for hours while maintaining a soft, classy impression that suits all personalities.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/691-281-412949-product-1.jpg"] },
+    { id: 12, name: "Morena Noir Perfume", category: "perfume", price: 2199, variants: ["Standard"], description: "Deep bold fragrance for confident personality. Morena Noir is designed for individuals who prefer strong, intense, and long-lasting scents that leave a powerful impression. It combines woody, musky, and slightly spicy notes to create a rich aroma suitable for evening wear and special occasions. The fragrance is designed to enhance confidence and elegance, making it ideal for formal events and night outings. Its premium formulation ensures durability on skin for extended hours without fading quickly. Packaged in a stylish bottle, it reflects luxury, strength, and sophistication in every spray.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/512-281-456597-product-2.jpeg", "https://content.public.markaz.app/markazimagevideo/public/products/512-281-456597-product-1.jpg"] },
     { id: 13, name: "Premium Silk Saree Collection", category: "clothing", price: 4199, variants: ["Black", "Maroon", "Green"], description: "Elegant silk saree for weddings & formal wear. This saree is made from high-quality silk fabric that offers a smooth, rich texture and graceful drape. It is designed for special occasions such as weddings, parties, and festive events, giving a traditional yet luxurious look. The fabric is lightweight yet durable, ensuring comfort during long wear. Its elegant color combinations and detailed patterns enhance its premium appeal. The saree reflects cultural beauty while maintaining modern style aesthetics, making it a perfect choice for women who want to stand out with elegance and sophistication.", images: ["https://amnaismail.com/Images/69982023-01-13WhatsApp%20Image%202023-01-13%20at%2012.40.43%20AM.jpeg", "https://dressifyshops.com/cdn/shop/files/IMG-20250427-WA0012.jpg?v=1753129244"] },
     { id: 14, name: "Beige Linen 2-Piece Set", category: "clothing", price: 2799, variants: ["Standard"], description: "Breathable and stylish summer outfit. Made from premium linen fabric, this 2-piece set is designed to provide maximum comfort in hot weather. The lightweight and airy material allows proper ventilation, keeping you cool throughout the day. Its minimalist beige tone adds a classy and modern appearance suitable for casual outings, office wear, or travel. The fabric is soft on skin and easy to maintain, making it ideal for daily use. With its simple yet elegant design, it combines comfort, style, and practicality in one outfit.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/248-11-712098-product-2.webp"] },
     { id: 15, name: "Eid Cotton Suit", category: "clothing", price: 2899, variants: ["Standard"], description: "Premium cotton festive wear with elegant design. This suit is specially designed for Eid celebrations and festive occasions, offering a perfect blend of tradition and modern fashion. Made from high-quality cotton, it ensures breathability and comfort even during long events. The fabric is soft, durable, and suitable for warm weather. Its elegant embroidery and stylish patterns enhance its festive appeal. This outfit is ideal for women who want a graceful and comfortable look during special occasions while maintaining cultural elegance and charm.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/1119-11-707517-product-1.webp"] },
-    { id: 16, name: "Antique Stone Rings", category: "jewelry", price: 1999, variants: ["Standard"], description: "Vintage-style rings with elegant stone finish. These rings are designed with a classic antique look, featuring beautifully embedded stones that enhance their overall appeal. The craftsmanship reflects traditional artistry combined with modern style. Perfect for parties, casual wear, or gifting, these rings add a touch of sophistication to any outfit. Their durable build ensures long-lasting shine and quality. Lightweight and comfortable to wear, they are suitable for daily use as well. Ideal for those who appreciate vintage jewelry with a stylish and elegant touch.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/700-44-497650-product-1.jpg"] },
-    { id: 17, name: "Couple Rings Set", category: "jewelry", price: 2099, variants: ["Standard"], description: "Stylish matching rings set for couples. This set symbolizes love, connection, and commitment between partners. Crafted with fine detailing, the rings feature a smooth finish and elegant design suitable for daily wear. They are lightweight, durable, and comfortable, making them perfect for long-term use. Ideal for gifting on anniversaries, engagements, or special moments, this set represents emotional value along with style. The modern yet minimal design ensures it matches any outfit while carrying a meaningful sentiment of togetherness.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/603-44-712564-product-1.webp"] },
+    { id: 16, name: "Antique Stone Rings", category: "jewelry", price: 1999, variants: ["Standard"], description: "Vintage-style rings with elegant stone finish. These rings are designed with a classic antique look, featuring beautifully embedded stones that enhance their overall appeal. The design reflects traditional artistry combined with modern style. Perfect for parties, casual wear, or gifting, these rings add a touch of sophistication to any outfit. Their durable build ensures long-lasting shine and quality. Lightweight and comfortable to wear, they are suitable for daily use as well. Ideal for those who appreciate vintage jewelry with a stylish and elegant touch.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/700-44-497650-product-1.jpg"] },
+    { id: 17, name: "Couple Rings Set", category: "jewelry", price: 2099, variants: ["Standard"], description: "Stylish matching rings set for couples. This set symbolizes love, connection, and commitment between partners. Styled with fine detailing, the rings feature a smooth finish and elegant design suitable for daily wear. They are lightweight, durable, and comfortable, making them perfect for long-term use. Ideal for gifting on anniversaries, engagements, or special moments, this set represents emotional value along with style. The modern yet minimal design ensures it matches any outfit while carrying a meaningful sentiment of togetherness.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/603-44-712564-product-1.webp"] },
     { id: 18, name: "Aura Premium Wrist Watch", category: "watch", price: 2199, variants: ["White", "Black", "Arabic Dial"], description: "Minimal stylish watch for daily wear. Aura Premium Wrist Watch combines elegance and simplicity, making it suitable for both casual and formal occasions. It features a clean dial design with precise timekeeping functionality. The durable strap ensures comfort during extended wear, while the scratch-resistant glass adds longevity. Its lightweight structure makes it easy to carry throughout the day. Designed for modern individuals, this watch enhances personal style while maintaining practicality. It is perfect for those who prefer a refined and minimalistic accessory.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/511-132-722745-product-1.webp", "https://content.public.markaz.app/markazimagevideo/public/products/1855-132-679053-product-3.webp"] },
     { id: 19, name: "Golden T9 Trimmer", category: "grooming", price: 2499, variants: ["Gold"], description: "Professional grooming trimmer with sharp blades. This trimmer is designed for precise and smooth cutting, making it ideal for beard shaping, hair trimming, and personal grooming. It features high-quality stainless steel blades that ensure clean and accurate results without irritation. The powerful motor provides consistent performance, while its ergonomic design offers easy handling. Rechargeable functionality makes it convenient for travel and daily use. Suitable for both professional and personal grooming, it delivers salon-like results at home with efficiency and reliability.", images: ["https://content.public.markaz.app/markazimagevideo/public/products/943-49-466768-product-1.jpg",] },
     { id: 20, name: "Portable Rechargeable Fan", category: "electronics", price: 3299, variants: ["Standard"], description: "Type-C mini fan with strong airflow for summer. This portable fan is designed for convenience and powerful cooling in compact size. It features rechargeable battery support with Type-C charging for fast and easy power-up. Despite its small size, it delivers strong airflow suitable for personal cooling at home, office, or outdoor use. Its lightweight and portable design makes it easy to carry anywhere. Ideal for hot weather, it ensures instant cooling while being energy-efficient and user-friendly, making it a perfect summer essential.", images: ["https://www.ardropshipping.com/storage/products/01KKJE2NNZ1R19FET23BNNS4DF_1773785864_69b9d3081b576.jpg"] },
@@ -247,11 +247,13 @@ function loadProductDetail() {
 
     // FAKE REVIEWS (existing)
     const fakeReviews = [
-        { name: "Sarah", rating: 5, comment: "Great product!" },
-        { name: "Mike", rating: 4, comment: "Good value" },
-        { name: "Emma", rating: 5, comment: "Perfect!" }
+        { name: "Hamza", rating: 5, comment: "Great product!" },
+        { name: "Noor", rating: 4, comment: "Good value I like It" },
+        { name: "Ayesha", rating: 5, comment: "Great Delivery on time always-Perfect!" }
     ];
-    const averageRating = fakeReviews.reduce((sum, r) => sum + r.rating, 0) / fakeReviews.length;
+    const storedReviews = loadProductReviews(product.id);
+    const allReviews = [...fakeReviews, ...storedReviews];
+    const averageRating = allReviews.reduce((sum, r) => sum + r.rating, 0) / allReviews.length;
 
     document.getElementById('product-detail').innerHTML = `
     <div class="product-images">
@@ -262,7 +264,7 @@ function loadProductDetail() {
       <h2>${product.name}</h2>
       <div class="product-rating">
         <div class="stars">${generateStars(averageRating)}</div>
-        <span>${averageRating.toFixed(1)} (${fakeReviews.length} reviews)</span>
+        <span>${averageRating.toFixed(1)} (${allReviews.length} reviews)</span>
       </div>
       <p class="product-price">PKR ${product.price}</p>
       <p class="product-description">${product.description}</p>
@@ -273,21 +275,104 @@ function loadProductDetail() {
       <div class="reviews-section">
         <h3>Customer Reviews</h3>
         <div class="reviews-list">
-          ${fakeReviews.map(review => `
-            <div class="review-item">
-              <div class="review-header">
-                <strong>${review.name}</strong>
-                <div class="review-stars">${generateStars(review.rating)}</div>
-              </div>
-              <p class="review-comment">${review.comment}</p>
+          ${allReviews.map(renderReviewItem).join('')}
+        </div>
+        <div class="review-form">
+          <h4>Share your experience</h4>
+          <div class="form-group">
+            <label for="reviewer-name">Name</label>
+            <input type="text" id="reviewer-name" placeholder="Your name (optional)">
+          </div>
+          <div class="form-row">
+            <div class="form-group rating-group">
+              <label for="review-rating">Rating</label>
+              <select id="review-rating">
+                <option value="5">5 stars</option>
+                <option value="4">4 stars</option>
+                <option value="3">3 stars</option>
+                <option value="2">2 stars</option>
+                <option value="1">1 star</option>
+              </select>
             </div>
-          `).join('')}
+          </div>
+          <div class="form-group">
+            <label for="review-comment">Review</label>
+            <textarea id="review-comment" rows="4" placeholder="Tell us what you liked about this product"></textarea>
+            <span id="review-error" class="field-error"></span>
+          </div>
+          <button class="btn" id="submit-review-btn">Submit Review</button>
         </div>
       </div>
     </div>
   `;
 
     setupVariantListener();
+    setupReviewForm(product.id);
+}
+
+function loadProductReviews(productId) {
+    if (!isLocalStorageAvailable()) return [];
+    const stored = localStorage.getItem(`productReviews_${productId}`);
+    return stored ? JSON.parse(stored) : [];
+}
+
+function saveProductReviews(productId, reviews) {
+    if (!isLocalStorageAvailable()) return;
+    localStorage.setItem(`productReviews_${productId}`, JSON.stringify(reviews));
+}
+
+function escapeHTML(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+function renderReviewItem(review) {
+    return `
+      <div class="review-item">
+        <div class="review-header">
+          <strong>${escapeHTML(review.name || 'Guest')}</strong>
+          <div class="review-stars">${generateStars(review.rating)}</div>
+        </div>
+        <p class="review-comment">${escapeHTML(review.comment)}</p>
+      </div>
+    `;
+}
+
+function setupReviewForm(productId) {
+    const submitBtn = document.getElementById('submit-review-btn');
+    if (!submitBtn) return;
+
+    submitBtn.addEventListener('click', event => {
+        event.preventDefault();
+        const nameInput = document.getElementById('reviewer-name');
+        const ratingSelect = document.getElementById('review-rating');
+        const commentInput = document.getElementById('review-comment');
+        const errorEl = document.getElementById('review-error');
+
+        const name = nameInput.value.trim() || 'Guest';
+        const comment = commentInput.value.trim();
+        const rating = parseInt(ratingSelect.value, 10) || 5;
+
+        if (!comment) {
+            if (errorEl) {
+                errorEl.textContent = 'Please share your review before submitting.';
+                errorEl.classList.add('visible');
+            }
+            return;
+        }
+
+        const reviews = loadProductReviews(productId);
+        reviews.unshift({ name, rating, comment });
+        saveProductReviews(productId, reviews);
+
+        if (errorEl) {
+            errorEl.textContent = '';
+            errorEl.classList.remove('visible');
+        }
+
+        loadProductDetail();
+    });
 }
 
 function setupColorButtons(productId) {

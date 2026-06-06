@@ -121,9 +121,9 @@ function loadProductDetail() {
 
   // FAKE REVIEWS (existing)
   const fakeReviews = [
-    { name: "Sarah", rating: 5, comment: "Great product!" },
-    { name: "Mike", rating: 4, comment: "Good value" },
-    { name: "Emma", rating: 5, comment: "Perfect!" }
+    { name: "Hamza", rating: 5, comment: "Great product!" },
+    { name: "Noor", rating: 4, comment: "Good value" },
+    { name: "Ayesha", rating: 5, comment: "Perfect!" }
   ];
   const averageRating = fakeReviews.reduce((sum, r) => sum + r.rating, 0) / fakeReviews.length;
 
