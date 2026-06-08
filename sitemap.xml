@@ -26,7 +26,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.yourdomain.com/about.html</loc>
+    <loc>https://www.narfi.shop/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -35,31 +35,31 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.yourdomain.com/products.html</loc>
+    <loc>https://www.narfi.shop/products.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://www.yourdomain.com/product.html</loc>
+    <loc>https://www.narfi.shop/product.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://www.yourdomain.com/images/og-image.jpg</image:loc>
+      <image:loc>https://www.narfi.shop/images/og-image.jpg</image:loc>
       <image:caption>Product detail og image</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.yourdomain.com/cart.html</loc>
+    <loc>https://www.narfi.shop/cart.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://www.yourdomain.com/checkout.html</loc>
+    <loc>https://www.narfi.shop/checkout.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://www.yourdomain.com/terms.html</loc>
+    <loc>https://www.narfi.shop/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
   </url>
