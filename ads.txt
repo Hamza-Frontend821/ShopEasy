@@ -1,0 +1,4 @@
+# Authorized digital sellers for NarFi
+# Replace or add additional entries if you use more ad networks.
+
+google.com, pub-9811034010626782, DIRECT, f08c47fec0942fa0

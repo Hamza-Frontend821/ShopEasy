@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.yourdomain.com/</loc>
+    <loc>https://www.narfi.shop/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://img.drz.lazcdn.com/static/pk/p/eea72037136c90ff9a79129204b9e03a.jpg_720x720q80.jpg</image:loc>
+      <image:caption>5-in-1 Hair Dryer Brush</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ardropshipping.com/storage/products/NiveBottle_1776717582_69e68f0e66c7e.jpg</image:loc>
+      <image:caption>Crystal Luxe Glass Bottle</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ardropshipping.com/storage/products/yellow--black-women-printed-night-suit-fabric-jersey-28028-510.jpg</image:loc>
+      <image:caption>Women Printed Night Suit Set</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://i.pinimg.com/736x/2d/cf/59/2dcf592452b5e3e995a0cdc44d35d1ca.jpg</image:loc>
+      <image:caption>Brown leather Tote Bag</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://content.public.markaz.app/markazimagevideo/public/products/1598-39-706932-product-1.webp</image:loc>
+      <image:caption>Mustard Leather Handbag Set</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.yourdomain.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80</image:loc>
+      <image:caption>About page hero image</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.yourdomain.com/products.html</loc>
@@ -19,6 +43,10 @@
     <loc>https://www.yourdomain.com/product.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.yourdomain.com/images/og-image.jpg</image:loc>
+      <image:caption>Product detail og image</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.yourdomain.com/cart.html</loc>
