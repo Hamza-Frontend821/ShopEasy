@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.yourdomain.com/sitemap.xml
-Host: www.yourdomain.com
+Sitemap: https://www.narfi.shop/sitemap.xml
+Host: www.narfi.shop

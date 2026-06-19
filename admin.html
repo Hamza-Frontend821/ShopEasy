@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NarFi — Admin Analytics</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            background: #02020a;
+        }
+
+        .admin-wrap {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 120px 1.25rem 2rem;
+        }
+
+        .admin-panel {
+            background: rgba(22, 21, 42, 0.95);
+            border: 1px solid rgba(200, 169, 109, 0.16);
+            border-radius: 18px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 36px rgba(2, 2, 10, 0.6);
+        }
+
+        .admin-title {
+            font-family: 'Playfair Display', serif;
+            color: #f0ece4;
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(200, 169, 109, 0.12);
+            border-radius: 16px;
+            padding: 1rem;
+        }
+
+        .k {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            font-size: 0.62rem;
+            color: rgba(200, 169, 109, 0.9);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .v {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #c8a96d;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .meta {
+            margin-top: 1rem;
+            color: rgba(240, 236, 228, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .row {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            min-width: 280px;
+            flex: 1;
+        }
+
+        .field label {
+            font-size: 0.85rem;
+            color: rgba(240, 236, 228, 0.7);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: 'Cinzel', serif;
+            font-size: 0.62rem;
+        }
+
+        .field input {
+            background: rgba(200, 169, 109, 0.05);
+            border: 1px solid rgba(200, 169, 109, 0.2);
+            border-radius: 10px;
+            padding: 0.8rem 0.9rem;
+            color: #f0ece4;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+
+        .error {
+            margin-top: 1rem;
+            color: #ff6b6b;
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        @media (max-width: 800px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html" class="logo-link">NarFi</a></h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count" class="cart-dot">0</span>)</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-wrap">
+            <div class="admin-panel">
+                <div class="admin-title">Admin Analytics (Real-time)</div>
+
+                <div class="row">
+                    <div class="field">
+                        <label>Admin token (required)</label>
+                        <input id="admin-token" type="password" placeholder="Paste ADMIN_TOKEN" />
+                    </div>
+                    <button class="btn" id="save-token" type="button">Save Token</button>
+                    <button class="btn btn-outline" id="refresh" type="button">Refresh Now</button>
+                </div>
+
+                <div class="error" id="auth-error">Unauthorized (wrong token)</div>
+
+                <div class="grid" style="margin-top: 1.5rem;">
+                    <div class="card">
+                        <span class="k">Online now</span>
+                        <span class="v" id="online-now">0</span>
+                    </div>
+                    <div class="card">
+                        <span class="k">Today visitors</span>
+                        <span class="v" id="today-visitors">0</span>
+                    </div>
+                    <div class="card">
+                        <span class="k">Last 24h visitors</span>
+                        <span class="v" id="last24h-visitors">0</span>
+                    </div>
+                </div>
+
+                <div class="meta" id="server-meta">—</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p class="f-copy">Admin analytics dashboard (noindex)</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const els = {
+                token: document.getElementById('admin-token'),
+                saveBtn: document.getElementById('save-token'),
+                refreshBtn: document.getElementById('refresh'),
+                err: document.getElementById('auth-error'),
+                online: document.getElementById('online-now'),
+                today: document.getElementById('today-visitors'),
+                last24: document.getElementById('last24h-visitors'),
+                meta: document.getElementById('server-meta'),
+            };
+
+            const LS_KEY = 'narfi_admin_token';
+            const tokenFromUrl = new URLSearchParams(location.search).get('token');
+
+            if (tokenFromUrl) {
+                localStorage.setItem(LS_KEY, tokenFromUrl);
+            }
+
+            const saved = localStorage.getItem(LS_KEY);
+            if (saved) {
+                els.token.value = saved;
+            }
+
+            function setError(show) {
+                els.err.style.display = show ? 'block' : 'none';
+            }
+
+            async function fetchAnalytics() {
+                const token = els.token.value.trim();
+                if (!token) return;
+
+                setError(false);
+                els.meta.textContent = 'Updating...';
+
+                try {
+                    const res = await fetch('/analytics', {
+                        headers: { 'x-admin-token': token }
+                    });
+
+                    if (res.status === 401) {
+                        setError(true);
+                        els.meta.textContent = 'Unauthorized';
+                        return;
+                    }
+
+                    const data = await res.json();
+                    els.online.textContent = data.onlineNow ?? 0;
+                    els.today.textContent = data.todayVisitors ?? 0;
+                    els.last24.textContent = data.last24hVisitors ?? 0;
+                    els.meta.textContent = `Server time: ${new Date(data.serverTs || Date.now()).toLocaleString()}`;
+                } catch (e) {
+                    els.meta.textContent = 'Failed to fetch analytics.';
+                }
+            }
+
+            els.saveBtn.addEventListener('click', () => {
+                const token = els.token.value.trim();
+                if (!token) return;
+                localStorage.setItem(LS_KEY, token);
+                setError(false);
+                fetchAnalytics();
+            });
+
+            els.refreshBtn.addEventListener('click', fetchAnalytics);
+
+            // Poll every 2s
+            setInterval(fetchAnalytics, 2000);
+
+            // First load
+            fetchAnalytics();
+        })();
+    </script>
+</body>
+
+</html>

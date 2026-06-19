@@ -1,5 +1,12 @@
 {
+  "name": "narfi-website",
+  "private": true,
+  "type": "module",
   "dependencies": {
-    "@vercel/analytics": "^2.0.1"
+    "@vercel/analytics": "^2.0.1",
+    "express": "^4.19.2"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
